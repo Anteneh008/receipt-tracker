@@ -1,9 +1,16 @@
-import React from 'react'
+import SchematicComponent from "@/components/schematic/SchematicComponent";
+import React from "react";
 
 function ManagePlan() {
   return (
-    <div>ManagePlan</div>
-  )
+    <div>
+      <SchematicComponent
+        componentId={
+          process.env.NEXT_PUBLIC_SCHEMATIC_CUSTOMER_PORTAL_COMPONENT_ID!
+        }
+      />
+    </div>
+  );
 }
 
-export default ManagePlan
+export default ManagePlan;
