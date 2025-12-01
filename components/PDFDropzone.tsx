@@ -122,9 +122,8 @@ function PDFDropzone() {
     [user, handleUpload],
   );
 
-  //   const canUpload = isUserSignedIn && isFeatureEnabled;
-
-  const canUpload = true;
+  const isUserSignedIn = !!user;
+  const canUpload = isUserSignedIn && isFeatureEnabled;
 
   return (
     <DndContext sensors={sensors}>
