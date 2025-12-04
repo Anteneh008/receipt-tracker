@@ -3,16 +3,10 @@
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
 import { useParams, useRouter } from "next/navigation";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { useQuery } from "convex/react";
-import {
-  ChevronLeft,
-  FileText,
-  Lightbulb,
-  Link,
-  Lock,
-  Sparkles,
-} from "lucide-react";
+import { ChevronLeft, FileText, Lightbulb, Lock, Sparkles } from "lucide-react";
 import { useSchematicFlag } from "@schematichq/schematic-react";
 import {
   Table,
