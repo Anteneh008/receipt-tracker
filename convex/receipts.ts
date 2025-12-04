@@ -144,17 +144,17 @@ export const deleteReceipt = mutation({
       throw new Error("Receipt not found");
     }
 
-    const identity = await ctx.auth.getUserIdentity();
+    // const identity = await ctx.auth.getUserIdentity();
 
-    if (!identity) {
-      throw new Error("Not authenticated");
-    }
+    // if (!identity) {
+    //   throw new Error("Not authenticated");
+    // }
 
-    const userId = identity.subject;
+    // const userId = identity.subject;
 
-    if (receipt.userId !== userId) {
-      throw new Error("Not authorized to update this receipt");
-    }
+    // if (receipt.userId !== userId) {
+    //   throw new Error("Not authorized to update this receipt");
+    // }
 
     //  Delete the file from storage
     await ctx.storage.delete(receipt.fileId);
